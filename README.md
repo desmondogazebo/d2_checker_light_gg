@@ -1,4 +1,8 @@
-# d2_checker_light_gg
+# light.gg-S-rank-checker-discord-bot
 Scans light.gg for S tier rolls, PLEASE CHECK ACTUAL ROLLS.
 
-running this will not work without a .env file for the discord bot which takes a DISCORD_TOKEN and DEFAULT_CHANNEL variable.
+Running this will not work without a .env file for the discord bot which takes a DISCORD_TOKEN and DEFAULT_CHANNEL variable.
+DISCORD_TOKEN refers to the bot token
+DEFAULT_CHANNEL refers to the channel ID for bot posts.
+
+This is a webscraper. Your use of the script contained may be un-allowed by light.gg. Please use with caution.
