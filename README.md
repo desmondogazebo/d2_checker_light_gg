@@ -6,3 +6,7 @@ DISCORD_TOKEN refers to the bot token
 DEFAULT_CHANNEL refers to the channel ID for bot posts.
 
 This is a webscraper. Your use of the script contained may be un-allowed by light.gg. Please use with caution.
+
+Expected output
+![image](https://github.com/desmondogazebo/light.gg-S-rank-checker-discord-bot/assets/13763140/a2b4f538-3f04-4ec3-ad2a-6d8c57db6999)
+
