@@ -1,10 +1,12 @@
 # light.gg-S-rank-checker-discord-bot
-Scans light.gg for S tier rolls and posts to discord. please check the actual rolls on the site.
+Scans light.gg for S tier rolls and posts to discord. 
+Please check the actual rolls on the site, S-tier is only a popularity factor and should not influence your meta decisions.
+
 This is a webscraper. Your use of the script contained may be un-allowed by light.gg. Please use with caution.
 
 ## For developers
 Running this will not work without a .env file for the discord bot which takes a DISCORD_TOKEN and DEFAULT_CHANNEL variable.
-- DISCORD_TOKEN refers to the bot token
+- DISCORD_TOKEN refers to the bot token. Please [create your own bot here](https://discord.com/developers/applications?new_application=true)
 - DEFAULT_CHANNEL refers to the channel ID for bot posts.
 
 ## Bot in action
@@ -13,4 +15,3 @@ Running this will not work without a .env file for the discord bot which takes a
 
 Expected output
 ![image](https://github.com/desmondogazebo/light.gg-S-rank-checker-discord-bot/assets/13763140/a2b4f538-3f04-4ec3-ad2a-6d8c57db6999)
-
