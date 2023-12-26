@@ -56,21 +56,31 @@ def check_vendor(vendor_name, html_data):
     return output_string
 
 
+async def scheduled_task():
+    while True:
+        print(f"Retrieving data from {urlString}...")
+        start = time.time()
+        session = init_browser(urlString)
+        msg = ""
+        for vendor in vendors:
+            msg += check_vendor(vendor, session)
+
+        if len(msg) != 0:
+            channel = bot.get_channel(int(DEFAULT_CHANNEL))
+            if channel:
+                await channel.send("@here\n" + msg)
+
+        end = time.time()
+        rounded_time = round(end - start, 2)
+        print(f"bot took {rounded_time}s to retrieve info")
+        
+        # Wait for 12 hours before running the task again
+        await asyncio.sleep(43200)  # 12 hours in seconds
+
 @bot.event
 async def on_ready():
-    print(f"Retrieving data from {urlString}...")
-    start = time.time()
-    session = init_browser(urlString)
-    msg = ""
-    for vendor in vendors:
-        msg += check_vendor(vendor, session)
-
-    if len(msg) != 0:
-        await bot.get_channel(int(DEFAULT_CHANNEL)).send("@here\n" + msg)
-
-    end = time.time()
-    rounded_time = round(end - start, 2)
-    print(f"bot took {rounded_time}s to retrieve info")
+    print(f'{bot.user} has connected to Discord!')
+    bot.loop.create_task(scheduled_task())
 
 
 bot.run(DISCORD_TOKEN)
